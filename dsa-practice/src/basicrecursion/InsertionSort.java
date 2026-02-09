@@ -22,12 +22,11 @@ public class InsertionSort {
         for (int value : arr)
             System.out.print(value + " ");
         System.out.println();
-
         insertionSort(arr, 0, n);
-
         System.out.println("After Using Insertion Sort:");
         for (int value : arr)
             System.out.print(value + " ");
         System.out.println();
     }
 }
+
