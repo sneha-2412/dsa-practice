@@ -23,6 +23,7 @@ public class BubbleSort {
 	    for (int num : arr) 
 	    	System.out.print(num + " ");
 	}
+	
 	public static void main(String[] args) {
 		int arr[]= {3,4,5,2,1,7,6};
 		int n=arr.length;

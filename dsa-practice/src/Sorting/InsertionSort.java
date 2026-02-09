@@ -24,6 +24,7 @@ public class InsertionSort {
         	}
         	nums[j+1]=key;
         }
+        
         System.out.println("After sorting:");
         for (int num : nums) {
             System.out.print(num + " ");
