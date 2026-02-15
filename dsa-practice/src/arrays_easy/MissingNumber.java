@@ -1,0 +1,38 @@
+package arrays_easy;
+
+public class MissingNumber {
+   public static int missingNum(int[] arr) {
+        long n = arr.length + 1;
+    
+        // Calculate the sum of array elements
+        long sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+    
+        // Use long for expected sum to avoid overflow
+        long expSum = n * (n + 1) / 2;
+    
+        // Return the missing number
+        return (int)(expSum - sum);
+    }
+   public static int missingNum2(int[] arr) {
+	    int n = arr.length + 1;
+	    int xor1 = 0, xor2 = 0;
+
+	    for (int i = 0; i < n - 1; i++) {
+	        xor2 ^= arr[i];
+	    }
+
+	    for (int i = 1; i <= n; i++) {
+	        xor1 ^= i;
+	    }
+
+	    return xor1 ^ xor2;
+	}
+
+    public static void main(String[] args) {
+        int[] arr = {8, 2, 4, 5, 3, 7, 1};
+        System.out.println(missingNum2(arr));
+    }
+}
